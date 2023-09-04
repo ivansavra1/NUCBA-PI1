@@ -65,30 +65,22 @@ a:hover {
   text-decoration: none;
   color: #fff;
   opacity: 70%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
 }
 
 .navbar-list a:hover {
   opacity: 100%;
 }
 
-#navbar-login span {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  text-decoration: none;
-  color: #fff;
-  /* opacity: 60%; */
-  font-size: 0.5em;
-  font-weight: 400;
-  display: flex;
-  text-align: center;
+.navbar-list ion-icon {
+  align-items: center;
+  font-size: 1.3rem;
 }
 
-#navbar-login > span {
-  color: var(--ukrblue);
-}
-
-#navbar-login > span + span {
-  color: var(--ukryellow);
+.navbar-list ion-icon:hover {
+  opacity: 100%;
 }
 
 .logo:hover {
@@ -110,13 +102,25 @@ hr {
   align-items: center;
 }
 
+.highlight {
+  display: inline-block;
+  background: black;
+  /* color: #0000; */
+}
+
 #about {
-  padding-left: 12rem;
-  padding-right: 12rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
   margin-top: 3rem;
   padding-bottom: 2rem;
   display: flex;
   justify-content: space-evenly;
+}
+
+.about-card h2 {
+  text-align: center;
+  font-size: 13px;
+  font-family: "Lucida Grande";
 }
 
 #about p {
@@ -137,9 +141,9 @@ header {
 
 .hero-title {
   background-image: /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), */ url(../assets/hero-bg.png);
-  /* background-size: cover; */
+  background-size: auto 700;
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +170,16 @@ header {
   -webkit-backdrop-filter: blur(5px);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 20px;
-  /* padding: 1rem; agregar padding hace que hero-title-text en sí esté borroso también */
+  /* padding: 1rem; agregar padding hace que hero-title-text en sí se vuelva difuminado también, usar z-index con un div separado para el texto no lo soluciona */
+}
+
+.hero-title-text p {
+  display: block;
+  overflow-wrap: break-word;
+  inline-size: 26rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
 }
 
 .bordercontainer h1 {
@@ -181,14 +194,6 @@ header {
 
 .bordercontainer > h1 + h1 {
   color: var(--ukryellow);
-}
-
-.hero-title-text p {
-  display: block;
-  overflow-wrap: break-word;
-  inline-size: 25rem;
-  font-size: 2rem;
-  color: white;
 }
 
 footer {
@@ -212,7 +217,7 @@ footer ul {
   transform: translate(-50%, -50%);
 }
 
-ion-icon {
+.footericons a {
   color: black;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
